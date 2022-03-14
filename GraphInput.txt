@@ -1,0 +1,16 @@
+6
+Vertex_1 COMPUTER 1250
+Vertex_2 COMPUTER 2500
+Vertex_3 SWITCH
+Vertex_4 ROUTER
+Vertex_5 ROUTER
+Vertex_6 COMPUTER 10000
+Vertex_1 Vertex_2 10 1
+Vertex_1 Vertex_3 50 5
+Vertex_2 Vertex_3 20 9
+Vertex_2 Vertex_4 20 0.5
+Vertex_2 Vertex_5 20 2.5
+Vertex_3 Vertex_4 10 3.14
+Vertex_4 Vertex_5 30 25
+Vertex_4 Vertex_6 10 30
+Vertex_5 Vertex_6 20 0.3
