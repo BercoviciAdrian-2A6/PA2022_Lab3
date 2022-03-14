@@ -9,8 +9,9 @@ public class Computer extends Node
     private String IP;
     private float storageCapacityGB;
 
-    Computer (float storageCapacityGB)
+    Computer (Network network, float storageCapacityGB)
     {
+        super(network);
         generateIP();
         this.storageCapacityGB = storageCapacityGB;
     }
@@ -44,13 +45,15 @@ public class Computer extends Node
 
 
     @Override
-    public float getStorageCapacity() {
-        return storageCapacityGB;
+    public String getStorageCapacity(String measurementUnit)
+    {
+        float translated = translateCapacity( storageCapacityGB, measurementUnit );
+        return translated + " " + measurementUnit;
     }
 
     @Override
     public String toString()
     {
-        return inNetworkNodeName + " - [computer - IP: " + IP + " - storage capacity: " + storageCapacityGB + "GB ]";
+        return nodeName + " - [computer - IP: " + IP + " - storage capacity: " + getStorageCapacity("TB") + " ]";
     }
 }

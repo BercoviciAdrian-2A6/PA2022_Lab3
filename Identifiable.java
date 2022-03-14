@@ -2,5 +2,8 @@ package com.bercoviciadrianpa2022lab3;
 
 public interface Identifiable
 {
-    String getIP();
+    default String getIP()
+    {
+        return null;
+    }
 }

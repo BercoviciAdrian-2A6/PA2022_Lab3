@@ -2,18 +2,12 @@ package com.bercoviciadrianpa2022lab3;
 
 public class Switch extends Node
 {
-    @Override
-    public String getIP() {
-        return null;
-    }
-
-    @Override
-    public float getStorageCapacity() {
-        return -1;
+    Switch(Network network) {
+        super(network);
     }
 
     @Override
     public String toString() {
-        return inNetworkNodeName + " - [switch]";
+        return nodeName + " - [switch - " + getStorageCapacity("GB") + "]";
     }
 }

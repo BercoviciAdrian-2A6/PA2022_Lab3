@@ -6,17 +6,11 @@ public class Main {
 
     public static void main(String[] args)
     {
-        Network network = new Network();
+        InputGenerator.generateInput();
 
-        network.addNode( new Computer( 1000 ) );
+        //Network network = new Network("GraphInput.txt");
 
-        network.addNode( new Computer( 2000 ) );
-
-        network.addNode( new Router() );
-
-        network.addNode( new Switch() );
-
-        network.addNode( new Computer( 5000 ) );
+        Network network = new Network("GeneratedInput.txt");
 
         network.printNetwork();
     }
